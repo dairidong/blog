@@ -1873,18 +1873,6 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
-codemirror-spell-checker@*:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/codemirror-spell-checker/download/codemirror-spell-checker-1.1.2.tgz#1c660f9089483ccb5113b9ba9ca19c3f4993371e"
-  integrity sha1-HGYPkIlIPMtRE7m6nKGcP0mTNx4=
-  dependencies:
-    typo-js "*"
-
-codemirror@*:
-  version "5.57.0"
-  resolved "https://registry.npm.taobao.org/codemirror/download/codemirror-5.57.0.tgz?cache=0&sync_timestamp=1597910558771&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcodemirror%2Fdownload%2Fcodemirror-5.57.0.tgz#d26365b72f909f5d2dbb6b1209349ca1daeb2d50"
-  integrity sha1-0mNlty+Qn10tu2sSCTScodrrLVA=
-
 collect.js@^4.12.8:
   version "4.28.2"
   resolved "https://registry.npm.taobao.org/collect.js/download/collect.js-4.28.2.tgz#08c11c48923641f7e86899adbd55aa31ed5de5b0"
@@ -4333,7 +4321,7 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@*, marked@^1.1.1:
+marked@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/marked/download/marked-1.1.1.tgz?cache=0&sync_timestamp=1594690314435&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarked%2Fdownload%2Fmarked-1.1.1.tgz#e5d61b69842210d5df57b05856e0c91572703e6a"
   integrity sha1-5dYbaYQiENXfV7BYVuDJFXJwPmo=
@@ -6103,15 +6091,6 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-simplemde@^1.11.2:
-  version "1.11.2"
-  resolved "https://registry.npm.taobao.org/simplemde/download/simplemde-1.11.2.tgz#a23a35d978d2c40ef07dec008c92f070d8e080e3"
-  integrity sha1-ojo12XjSxA7wfewAjJLwcNjggOM=
-  dependencies:
-    codemirror "*"
-    codemirror-spell-checker "*"
-    marked "*"
-
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/slash/download/slash-1.0.0.tgz?cache=0&sync_timestamp=1589682715547&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fslash%2Fdownload%2Fslash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -6620,11 +6599,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-
-typo-js@*:
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/typo-js/download/typo-js-1.1.0.tgz#a5a9f592bcb453666bf70c9694da58705d025ed8"
-  integrity sha1-pan1kry0U2Zr9wyWlNpYcF0CXtg=
 
 uglify-js@3.4.x:
   version "3.4.10"
