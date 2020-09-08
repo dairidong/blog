@@ -1,0 +1,36 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    min-height: 100vh;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    color: #303133;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.el-main .container {
+    min-height: 82vh;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+    padding-top: 1.5rem;
+    border: 1px solid rgb(233, 233, 235);
+    border-radius: 10px;
+}
+
+.none-text {
+    cursor: not-allowed;
+    color: #909399;
+}
+
+.el-link {
+    vertical-align: baseline !important;
+}
