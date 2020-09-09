@@ -83,6 +83,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -90,6 +91,7 @@ __webpack_require__.r(__webpack_exports__);
       copyright_link: '',
       icp_beian: '',
       icp_link: 'http://beian.miit.gov.cn/',
+      police_icon: '/police.png',
       police_beian: '',
       police_link: ''
     };
@@ -427,6 +429,8 @@ var render = function() {
       _c(
         "span",
         [
+          _c("img", { attrs: { src: _vm.police_icon } }),
+          _vm._v(" "),
           _c(
             "el-link",
             {

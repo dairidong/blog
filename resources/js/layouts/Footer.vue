@@ -25,6 +25,7 @@
         </span>
         <el-divider direction="vertical"></el-divider>
         <span>
+            <img :src="police_icon"/>
             <el-link :href="police_link"
                      :underline="false"
                      target="_blank"
@@ -43,6 +44,7 @@
                 copyright_link: '',
                 icp_beian: '',
                 icp_link: 'http://beian.miit.gov.cn/',
+                police_icon: '/police.png',
                 police_beian: '',
                 police_link: '',
             }
