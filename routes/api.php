@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('Api')->group(function ($router) {
     // 分类
-    $router->get('categories', 'CategoryController@index');
+    $router->get('/categories', 'CategoryController@index');
+    $router->get('/categories/{category}', 'CategoryController@show');
 
     // 文章
     $router->get('/posts', 'PostController@index');

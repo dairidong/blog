@@ -54,6 +54,9 @@
 
 <script>
     export default {
+        props: {
+            category: Number,
+        },
         data() {
             return {
                 shadow: 'hover',
@@ -81,7 +84,12 @@
         methods: {
             getPosts(page, pageSize) {
                 let that = this;
-                this.$http.get(`/posts?page=${parseInt(page)}&pageSize=${parseInt(pageSize)}`)
+                let url = `/posts?page=${parseInt(page)}&pageSize=${parseInt(pageSize)}`;
+                if (this.category) {
+                    url += `&category=${this.category}`;
+                }
+
+                this.$http.get(url)
                     .then(function (response) {
                         that.posts = response.data;
                         that.postsTotal = response.meta.total;

@@ -81440,7 +81440,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var routes = [{
   path: '',
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ../views/Home */ "./resources/js/views/Home.vue"));
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../views/Home */ "./resources/js/views/Home.vue"));
   },
   children: [{
     path: '',
@@ -81449,7 +81449,7 @@ var routes = [{
       title: 'DRD 博客'
     },
     component: function component() {
-      return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ../views/MainPage */ "./resources/js/views/MainPage.vue"));
+      return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ../views/MainPage */ "./resources/js/views/MainPage.vue"));
     }
   }, {
     path: '/posts/:id',
@@ -81459,7 +81459,10 @@ var routes = [{
     }
   }, {
     path: '/categories/:id',
-    name: 'category'
+    name: 'category',
+    component: function component() {
+      return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ../views/Category */ "./resources/js/views/Category.vue"));
+    }
   }, {
     path: '/404',
     name: 'notFound',
