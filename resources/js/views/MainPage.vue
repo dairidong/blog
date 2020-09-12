@@ -7,12 +7,11 @@
 </template>
 
 <script>
-    import Container from '../layouts/Container';
     import ArticleItemBox from "../components/ArticleItemBox";
 
     export default {
         components: {
-            Container, ArticleItemBox
+            ArticleItemBox
         }
     }
 </script>

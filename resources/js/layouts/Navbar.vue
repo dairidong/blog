@@ -7,18 +7,18 @@
         <!--    logo 结束    -->
 
         <!--    文章开始    -->
-<!--        <el-submenu index="2" :show-timeout="100" :hide-timeout="100">-->
-<!--            <template slot="title"><i class="el-icon-notebook-1"></i>文章</template>-->
-<!--            <div v-if="categories.length">-->
-<!--                <el-menu-item v-for="(category,key) in categories" :key="key" :index="category.title"-->
-<!--                              :route="{name: 'categories',params: {id:category.id}}">-->
-<!--                    {{category.title}}-->
-<!--                </el-menu-item>-->
-<!--            </div>-->
-<!--            <div v-else>-->
-<!--                <el-menu-item>无</el-menu-item>-->
-<!--            </div>-->
-<!--        </el-submenu>-->
+        <el-submenu index="2" :show-timeout="100" :hide-timeout="100">
+            <template slot="title"><i class="el-icon-notebook-1"></i>文章</template>
+            <div v-if="categories.length">
+                <el-menu-item v-for="(category,key) in categories" :key="key" :index="category.title"
+                              :route="{name: 'category',params: {id:category.id}}">
+                    {{category.title}}
+                </el-menu-item>
+            </div>
+            <div v-else>
+                <el-menu-item>无</el-menu-item>
+            </div>
+        </el-submenu>
         <!--    文章结束    -->
     </el-menu>
 </template>

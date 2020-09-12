@@ -22,6 +22,7 @@ const routes = [
             {
                 path: '/categories/:id',
                 name: 'category',
+                component: () => import('../views/Category'),
             },
             {
                 path: '/404',

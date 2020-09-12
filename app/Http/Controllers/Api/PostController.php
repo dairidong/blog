@@ -13,10 +13,15 @@ class PostController extends Controller
     public function index(Request $request)
     {
         $pageSize = (int)$request->input('pageSize', 6);
-        $posts = Post::query()
+        $query = Post::query()
             ->select('id', 'title', 'slug', 'cover', 'outline', 'category_id', 'published_at')
-            ->where('is_published', true)
-            ->with('category')
+            ->where('is_published', true);
+
+        if ($request->input('category')) {
+            $query->where('category_id', (int)$request->input('category'));
+        }
+
+        $posts = $query->with('category')
             ->latest()
             ->paginate($pageSize);
 
