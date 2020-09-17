@@ -20,6 +20,6 @@ yarn-error.log
 /public/mix-manifest.json
 /public/fonts/*
 
-!/public/css
-!/public/js
-!/public/fonts
+!/public/css/
+!/public/js/
+!/public/fonts/
