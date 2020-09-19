@@ -37,7 +37,7 @@
 </template>
 
 <script>
-    import marked from 'marked';
+    import marked from '../utils/marked';
     import formatTime from '../utils/formatTime';
 
     export default {
@@ -89,7 +89,7 @@
             },
             // 获取格式化后的文章内容
             markdownToHtml(value) {
-                this.content = marked(value)
+                this.content = marked(value);
             },
         }
     }
@@ -97,6 +97,7 @@
 
 <style scoped>
     @import "~github-markdown-css";
+    @import '~highlight.js/styles/googlecode.css';
 
     @media (max-width: 767px) {
         .markdown-body {

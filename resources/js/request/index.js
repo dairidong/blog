@@ -3,7 +3,7 @@ import router from '../router';
 import {Message} from "element-ui";
 
 const service = axios.create({
-    baseURL: 'https://' + window.location.host + '/api',
+    baseURL: '/api',
     timeout: 5000,
 });
 
