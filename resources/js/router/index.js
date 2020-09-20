@@ -31,6 +31,8 @@ const routes = [
             },
         ],
     },
+    // 不存在的地址，自动重定向到 404 页面
+    {path: '*', redirect: '/404',},
 ];
 
 const router = new Router({
