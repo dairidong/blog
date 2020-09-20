@@ -97,7 +97,7 @@
 
 <style scoped>
     @import "~github-markdown-css";
-    @import '~highlight.js/styles/googlecode.css';
+    @import '~highlight.js/styles/github-gist.css';
 
     @media (max-width: 767px) {
         .markdown-body {
