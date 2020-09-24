@@ -19,6 +19,8 @@ class PostController extends AdminController
     protected function grid()
     {
         return Grid::make(new Post(['category']), function (Grid $grid) {
+            $grid->model()->latest();
+
             $grid->column('id')->sortable();
             $grid->column('title');
             $grid->column('slug');
