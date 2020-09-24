@@ -14,7 +14,7 @@ class PostController extends Controller
     {
         $pageSize = (int)$request->input('pageSize', 6);
         $query = Post::query()
-            ->select('id', 'title', 'slug', 'cover', 'outline', 'category_id', 'published_at')
+            ->select('id', 'title', 'slug', 'cover', 'category_id', 'published_at')
             ->where('is_published', true);
 
         if ($request->input('category')) {
