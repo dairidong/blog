@@ -32,13 +32,14 @@
             });
         },
         beforeRouteUpdate(to, from, next) {
-            this.getCategory();
+            this.getCategory(to.params.id);
             next();
         },
         methods: {
-            getCategory() {
+            getCategory(categoryId) {
                 let that = this;
-                this.$http.get(`/categories/${this.categoryId}`)
+                let id = categoryId ? categoryId : this.categoryId;
+                this.$http.get(`/categories/${id}`)
                     .then(response => {
                         that.category = response.data
                     })
