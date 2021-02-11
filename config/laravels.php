@@ -249,7 +249,11 @@ return [
     |
     */
 
-    'cleaners' => [],
+    'cleaners' => [
+        Hhxsv5\LaravelS\Illuminate\Cleaners\SessionCleaner::class,
+        Hhxsv5\LaravelS\Illuminate\Cleaners\AuthCleaner::class,
+        Hhxsv5\LaravelS\Illuminate\Cleaners\DcatAdminCleaner::class,
+    ],
 
     /*
     |--------------------------------------------------------------------------
