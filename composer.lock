@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69a5625ca328473b531667871f606021",
+    "content-hash": "d06143a5b10cbf66fb1f98159a6ccebd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1269,104 +1269,6 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
-        },
-        {
-            "name": "hhxsv5/laravel-s",
-            "version": "v3.7.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hhxsv5/laravel-s.git",
-                "reference": "868f34c0c4c7dad836cbd2c14b46c7e76e2c9365"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hhxsv5/laravel-s/zipball/868f34c0c4c7dad836cbd2c14b46c7e76e2c9365",
-                "reference": "868f34c0c4c7dad836cbd2c14b46c7e76e2c9365",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-pcntl": "*",
-                "php": ">=5.5.9",
-                "swoole/ide-helper": "@dev",
-                "symfony/console": ">=2.7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=4.8.36"
-            },
-            "suggest": {
-                "ext-inotify": "Inotify, used to real-time reload.",
-                "ext-swoole": "Coroutine-based concurrency library for PHP, require >= 1.7.19."
-            },
-            "bin": [
-                "bin/fswatch"
-            ],
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Hhxsv5\\LaravelS\\Illuminate\\LaravelSServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Hhxsv5\\LaravelS\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Xie Biao",
-                    "email": "hhxsv5@sina.com"
-                }
-            ],
-            "description": "🚀 LaravelS is an out-of-the-box adapter between Swoole and Laravel/Lumen.",
-            "homepage": "https://github.com/hhxsv5/laravel-s",
-            "keywords": [
-                "LaravelS",
-                "async",
-                "coroutine",
-                "http",
-                "inotify",
-                "laravel",
-                "laravel-s",
-                "lumen",
-                "performance",
-                "process",
-                "server",
-                "swoole",
-                "task",
-                "tcp",
-                "timer",
-                "udp",
-                "websocket"
-            ],
-            "funding": [
-                {
-                    "url": "https://gitee.com/hhxsv5/laravel-s?donate=true",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.blockchain.com/btc/address/367HnAzVTAEk8offesDhcsCQswnugsE54u",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.paypal.me/hhxsv5",
-                    "type": "custom"
-                }
-            ],
-            "time": "2021-02-05T15:53:15+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3033,57 +2935,17 @@
             "time": "2021-01-12T09:35:59+00:00"
         },
         {
-            "name": "swoole/ide-helper",
-            "version": "4.6.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/swoole/ide-helper.git",
-                "reference": "3292fef367a340ffd7b55ec806184d2268379d4a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/swoole/ide-helper/zipball/3292fef367a340ffd7b55ec806184d2268379d4a",
-                "reference": "3292fef367a340ffd7b55ec806184d2268379d4a",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": "~6.5.0",
-                "laminas/laminas-code": "~3.4.0",
-                "squizlabs/php_codesniffer": "~3.5.0",
-                "symfony/filesystem": "~4.0"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Team Swoole",
-                    "email": "team@swoole.com"
-                }
-            ],
-            "description": "IDE help files for Swoole.",
-            "time": "2021-02-09T23:28:35+00:00"
-        },
-        {
             "name": "symfony/console",
-            "version": "v5.2.2",
+            "version": "v5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d62ec79478b55036f65e2602e282822b8eaaff0a"
+                "reference": "89d4b176d12a2946a1ae4e34906a025b7b6b135a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d62ec79478b55036f65e2602e282822b8eaaff0a",
-                "reference": "d62ec79478b55036f65e2602e282822b8eaaff0a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/89d4b176d12a2946a1ae4e34906a025b7b6b135a",
+                "reference": "89d4b176d12a2946a1ae4e34906a025b7b6b135a",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3170,7 +3032,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T10:15:41+00:00"
+            "time": "2021-01-28T22:06:19+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -5052,7 +4914,7 @@
         },
         {
             "name": "symfony/string",
-            "version": "v5.2.2",
+            "version": "v5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
@@ -6015,6 +5877,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
         {
@@ -7909,12 +7772,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": "",
                 "mirrors": [
