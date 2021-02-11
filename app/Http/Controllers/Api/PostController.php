@@ -32,17 +32,6 @@ class PostController extends Controller
     {
         $post->load('category');
 
-        $prev = Post::query()->where('id', '<', $post->id)
-            ->where('is_published', true)
-            ->orderBy('id', 'desc')
-            ->take(1)->value('id');
-
-
-        $next = Post::query()->where('id', '>', $post->id)
-            ->where('is_published', true)
-            ->orderBy('id', 'desc')
-            ->take(1)->value('id');
-
         return (new PostResource($post))->loadBetweenPage();
     }
 }
