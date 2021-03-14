@@ -8,6 +8,7 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
 /**
+ * ElasticSearch 服务注册
  * Class ESServiceProvider
  * @package App\Providers
  */
