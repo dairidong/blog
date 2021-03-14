@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use App\Services\ElasticSearchMigrations\ESMigration;
 use App\Services\ElasticSearchMigrations\PostsMigration;
 use Illuminate\Console\Command;
-use Illuminate\Support\Arr;
 
 class ElasticSearchMigrate extends Command
 {
