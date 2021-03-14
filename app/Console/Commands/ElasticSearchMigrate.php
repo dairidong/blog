@@ -27,7 +27,7 @@ class ElasticSearchMigrate extends Command
     ];
 
     protected $actions = [
-        'create', 'delete',
+        'create', 'delete', 'refresh'
     ];
 
     /**

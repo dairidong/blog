@@ -50,10 +50,25 @@ abstract class ESMigration
         return $response['acknowledged'];
     }
 
+    /**
+     * 删除索引
+     * @return bool
+     */
     public function delete()
     {
         $response = $this->getClient()->indices()->delete(['index' => $this->index]);
         return $response['acknowledged'];
+    }
+
+    /**
+     * 重建索引
+     * @return bool
+     */
+    public function refresh()
+    {
+        $this->delete();
+
+        return $this->create();
     }
 
     /**
