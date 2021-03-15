@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Services\ElasticSearchMigrations;
+namespace App\Services\ElasticSearch\Migrations;
 
 
 class PostsMigration extends ESMigration

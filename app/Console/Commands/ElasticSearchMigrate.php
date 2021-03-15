@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Services\ElasticSearchMigrations\ESMigration;
-use App\Services\ElasticSearchMigrations\PostsMigration;
+use App\Services\ElasticSearch\Migrations\ESMigration;
+use App\Services\ElasticSearch\Migrations\PostsMigration;
 use Elasticsearch\Client;
 use Illuminate\Console\Command;
 
