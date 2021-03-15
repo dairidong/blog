@@ -34,15 +34,13 @@ class PostsMigration extends ESMigration
                     'type'  => 'keyword',
                     'index' => false,
                 ],
-                'content'      => [
+                'md_content'   => [
                     'type'     => 'text',
                     'analyzer' => 'ik_smart',
-                    'fields'   => [
-                        'outline' => [
-                            'type'     => 'text',
-                            'analyzer' => 'ik_smart'
-                        ]
-                    ]
+                ],
+                'content'      => [
+                    'type'     => 'text',
+                    'analyzer' => 'ik_smart'
                 ],
                 'category'     => [
                     'type'       => 'object',

@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Services\ElasticSearchMigrations\ESMigration;
 use App\Services\ElasticSearchMigrations\PostsMigration;
+use Elasticsearch\Client;
 use Illuminate\Console\Command;
 
 class ElasticSearchMigrate extends Command
@@ -26,19 +27,13 @@ class ElasticSearchMigrate extends Command
         'posts' => PostsMigration::class
     ];
 
+    /**
+     * 开放给 command 的 action
+     * @var string[]
+     */
     protected $actions = [
         'create', 'delete', 'refresh'
     ];
-
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
 
     /**
      * Execute the console command.
@@ -48,14 +43,17 @@ class ElasticSearchMigrate extends Command
     public function handle()
     {
         $indices = $this->getIndices();
-        $classes = $this->getMigrationClass($indices);
-        $action = $this->getAction();
+        $migrations = $this->getMigrationClass($indices);
+        $action = $this->checkAction();
 
-        foreach ($classes as $class) {
-            if ($class instanceof ESMigration) {
-                $result = $class->$action();
-
-                var_dump($result);
+        foreach ($migrations as $migration) {
+            if ($migration instanceof ESMigration) {
+                $result = $this->$action($migration);
+                if ($result) {
+                    $this->info("Index {$migration->index} {$action}. done!");
+                } else {
+                    $this->error("Index {$migration->index} {$action}. failed!");
+                }
             }
         }
     }
@@ -72,12 +70,12 @@ class ElasticSearchMigrate extends Command
             exit();
         }
 
-        return explode(',', $option);
+        return array_unique(explode(',', $option));
     }
 
     /**
      * @param string[] $indices
-     * @return array
+     * @return ESMigration[]
      */
     protected function getMigrationClass(array $indices)
     {
@@ -94,7 +92,11 @@ class ElasticSearchMigrate extends Command
         return $migrations;
     }
 
-    protected function getAction()
+    /**
+     * 获取 action
+     * @return array|bool|string|null
+     */
+    protected function checkAction()
     {
         $action = $this->option('action');
         if (!in_array($action, $this->actions)) {
@@ -102,5 +104,55 @@ class ElasticSearchMigrate extends Command
             exit();
         }
         return $action;
+    }
+
+    /**
+     * 获取 ES 客户端
+     * @return Client
+     */
+    protected function getClient()
+    {
+        return app('es');
+    }
+
+    /**
+     * 创建索引
+     * @param ESMigration $migration
+     * @return bool
+     */
+    protected function create(ESMigration $migration)
+    {
+        $params = [
+            'index' => $migration->index,
+            'body'  => [
+                'mappings' => $migration->mappings(),
+            ]
+        ];
+
+        $response = $this->getClient()->indices()->create($params);
+        return $response['acknowledged'];
+    }
+
+    /**
+     * 删除索引
+     * @param ESMigration $migration
+     * @return bool
+     */
+    public function delete(ESMigration $migration)
+    {
+        $response = $this->getClient()->indices()->delete(['index' => $migration->index]);
+        return $response['acknowledged'];
+    }
+
+    /**
+     * 重建索引
+     * @param ESMigration $migration
+     * @return bool
+     */
+    public function refresh(ESMigration $migration)
+    {
+        $this->delete($migration);
+
+        return $this->create($migration);
     }
 }
